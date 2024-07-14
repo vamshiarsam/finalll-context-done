@@ -1,5 +1,11 @@
+
+
+
+
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Provider, { useAppContext } from "./context/usercontext";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,9 +15,30 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // const {name}=useAppContext()
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body >
+
+      
+        <h1>wala layoutttttttttttttttttttttttt</h1>
+
+        
+        <Provider>
+
+        
+      
+        <div style={{border:"2px solid red"}}>
+        {children}
+        </div>
+        </Provider>
+       
+        
+        </body>
     </html>
   );
 }
+
+
+
+
