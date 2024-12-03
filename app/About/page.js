@@ -4,12 +4,15 @@ import { submitForm } from '../actions/submit-form'
 export default function ContactPage() {
   return (
     <div className="max-w-md mx-auto mt-8">
-      
+
+
+
       <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
       <form action={submitForm}>
         <div className="mb-4">
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
           <input
+          
             type="text"
             id="name"
             name="name"
